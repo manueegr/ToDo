@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+/* Definición de variables para colores */
+:root{
+    --orange: #d95550;
+    --lightorange: #dd6662;
+    --verylightorange: #f89e8b;
+    --gray:#55557b;
+    --white:#fff; 
+    --lightblack: #282827;
+    --lighgrey:#424242;
+    --verylightgrey: #181818;
+}
+/*Estilo general de la página*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    /* justify-content: center;
+    align-items: center; */
+    background-color:var(--lightblack);
+
+}
+
+/* .container {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 25vw;
+    height: 30vw;
+    background-color: #dd6662;
+} */
+/* Estilo del encabezado */
+h1{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 200px;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 0 0 .8vw var(--white);
+}
+/* Estilo del formulario */
+form{
+    /*border: 1px solid-> ayuda visual*/
+    width: 400px;
+    margin: 45px auto;
+    text-align: center;
+}
+form input[type="text"]{
+    background-color: var(--lightblack);
+    color: var(--white);
+    border-style: none;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+form input[type="text"]::placeholder{
+    color: var(--white);
+}
+/* Elimina el contorno al enfocar el input de texto */
+/*no se creará la línea al escribir*/
+form input[type="text"]:focus{
+    outline: none;
+}
+form input[type="submit"]{
+    font-size: 2em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: none;
+    color: var(--lightblack);
+}
+form input[type="submit"]:hover{
+    background-color: var(--lighgrey);
+    box-shadow: 0 0 .4vw var(--lighgrey);
+    cursor:pointer;
+    color: var(--white);
+    transition: ease 0.2s background-color, box-shadow;
+}
+
+/* Estilo del contenedor de la lista de tareas */
+.list-container{
+    width: 400px;
+    margin: 0 auto;
+    /*border: 1px solid;*/
+}
+/* Estilo de cada tarea en la lista */
+.task-container{
+    background-color: var(--verylightgrey);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+}
+/* Estilo del botón de cierre (borrar tarea) */
+#close-btn{
+    width: 15px;
+    height: 15px;
+    color: var(--lighgrey);
+}
+#close-btn:hover{
+    cursor: pointer;
+    text-shadow: 0 0 .8vw var(--lighgrey);
+    transition: 0.2s ease text-shadow;
+}
+/* Estilo de las estadísticas */
+#stats{
+    margin-top: 25px;
+    font-size: 1em;
+    color: var(--lighgrey);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+/* Estilo del footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--lightblack);
+    color: #858484;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 .8vw var(--lighgrey);
+    font-family: 'Poppins', sans-serif;
+}
